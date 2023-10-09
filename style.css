@@ -86,3 +86,23 @@ html,body {
     cursor: pointer;
     background-color: rgb(64, 100, 64);
 }
+
+@media only screen and (max-width: 600px ) {
+    #p_top {
+        height: 100px;
+        width: 100%;
+        background-color: rgb(64, 100, 64);
+        display: flex;
+        justify-content: space-evenly;
+        color: #fff;
+    }
+
+    .elem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 2px;
+        
+    }
+}

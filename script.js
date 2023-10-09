@@ -1,15 +1,34 @@
-function makeBubble(){
-    var clutter = "";
+document.addEventListener("DOMContentLoaded",init);
+function init(){
+    let query = window.matchMedia("(max-width: 600px )");
+    if(query.matches){
+        function makeBubble(){
+            var clutter = "";
+        
+        for(var i = 1;i<=5;i++){
+            var rn = Math.floor(Math.random()*10);
+            clutter += `<div class="bubble">${rn}</div>`;
+        }
+        
+        document.querySelector(".pbtm").innerHTML = clutter;
+        }
+    }
 
-for(var i = 1;i<=102;i++){
-    var rn = Math.floor(Math.random()*10);
-    clutter += `<div class="bubble">${rn}</div>`;
+    else {
+        function makeBubble(){
+            var clutter = "";
+        
+        for(var i = 1;i<=102;i++){
+            var rn = Math.floor(Math.random()*10);
+            clutter += `<div class="bubble">${rn}</div>`;
+        }
+        
+        document.querySelector(".pbtm").innerHTML = clutter;
+        }
+        
+
+    }
 }
-
-document.querySelector(".pbtm").innerHTML = clutter;
-}
-
-
 var timer = 60;
 var score = 0;
 var hitrn = 0;
@@ -49,4 +68,4 @@ document.querySelector(".pbtm").addEventListener("click",function(dets){
 })
 hitVal();
 runTimer();
-makeBubble();
+// makeBubble();
